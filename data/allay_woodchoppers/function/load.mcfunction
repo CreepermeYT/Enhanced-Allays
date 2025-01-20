@@ -1,0 +1,1 @@
+scoreboard objectives add allayw.delay dummy

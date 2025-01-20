@@ -1,0 +1,2 @@
+execute unless data storage enhanced_allays:enabled allay_woodchoppers run data modify storage enhanced_allays:enable allay_woodchoppers set value 0
+execute if data storage enhanced_allays:enabled allay_woodchoppers run data remove storage enhanced_allays:enabled allay_woodchoppers
