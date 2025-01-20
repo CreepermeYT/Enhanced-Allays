@@ -47,7 +47,7 @@ execute if entity @s[tag=allayw.foundwood] run return 1
 
 $execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanlongrange_$(tree) run tag @s add allayw.foundwood
 #execute if entity @s[tag=allayw.foundwood] run say longrange
-$execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~ ~ {Tags:["allayw.newb","allayw.longrange","allayw.bringallay_$(tree)"]}
+$execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~ ~ {CustomName:'"allay_woodchoppers:$(tree)_log marker"',Tags:["allayw.newb","allayw.longrange","allayw.bringallay_$(tree)"]}
 execute if entity @s[tag=allayw.foundwood] run return 1
 
 
