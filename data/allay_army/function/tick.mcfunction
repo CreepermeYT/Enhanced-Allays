@@ -12,7 +12,7 @@ execute as @e[type=allay,tag=allayarmy.sword] run tag @s remove allayarmy.sword
 #do attack
 tag @e[tag=allayarmy.attacked] add allayarmy.notattackedyet
 execute as @e[type=allay,tag=allayarmy.attacking] at @s run function allay_army:attack
-execute as @e[tag=allayarmy.notattackedyet] run say an attacked was leftover - error allay army
+#execute as @e[tag=allayarmy.notattackedyet] run say an attacked was leftover - error allay army
 execute as @e[tag=allayarmy.notattackedyet] run tag @s remove allayarmy.attacked
 execute as @e[tag=allayarmy.notattackedyet] run tag @s remove allayarmy.notattackedyet
 

@@ -1,3 +1,5 @@
+tag @s remove allayarmy.timeout
+data modify entity @s NoAI set value 0b
 scoreboard players remove @s allayarmy.attackdelay 1
 
 execute if entity @s[scores={allayarmy.attackdelay=7..}] at @s positioned ^ ^0.15 ^0.4 if function allay_army:ispositionsafe run tp @s ~ ~ ~ ~ -10

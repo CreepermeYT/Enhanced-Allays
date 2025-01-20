@@ -1,27 +1,31 @@
 #attack timeout
 scoreboard players remove @s allayarmy.attackdelay 1
 #if attack timeout ran out, stop attacking
-execute if entity @s[scores={allayarmy.attackdelay=..0}] run tag @s remove allayarmy.attacking
-execute if entity @s[scores={allayarmy.attackdelay=..0}] run tag @n[tag=allayarmy.notattackedyet] remove allayarmy.attacked
-execute if entity @s[scores={allayarmy.attackdelay=..0}] run tag @n[tag=allayarmy.notattackedyet] remove allayarmy.notattackedyet
-execute if entity @s[scores={allayarmy.attackdelay=..0}] run tag @s add allayarmy.attackdelay
-execute if entity @s[scores={allayarmy.attackdelay=..0}] run scoreboard players set @s allayarmy.attackdelay 80
-##execute if entity @s[scores={allayarmy.attackdelay=80}] run say ran out time
-execute if entity @s[scores={allayarmy.attackdelay=80}] run return 0
+execute if entity @s[scores={allayarmy.attackdelay=..0}] run tag @s add allayarmy.timeout
+execute if entity @s[tag=allayarmy.timeout] run tag @s remove allayarmy.attacking
+execute if entity @s[tag=allayarmy.timeout] run tag @n[tag=allayarmy.notattackedyet] remove allayarmy.attacked
+execute if entity @s[tag=allayarmy.timeout] run tag @n[tag=allayarmy.notattackedyet] remove allayarmy.notattackedyet
+execute if entity @s[tag=allayarmy.timeout] run tag @s add allayarmy.attackdelay
+execute if entity @s[tag=allayarmy.timeout] run tag @s add allayarmy.afterattack
+execute if entity @s[tag=allayarmy.timeout] run scoreboard players set @s allayarmy.attackdelay 15
+##execute if entity @s[tag=allayarmy.timeout] run say ran out time
+execute if entity @s[tag=allayarmy.timeout] run return 0
 #if no attacked mob nearby, stop attacking
 execute unless entity @n[tag=allayarmy.notattackedyet,distance=..64] run tag @s remove allayarmy.attacking
 execute unless entity @n[tag=allayarmy.notattackedyet,distance=..64] run tag @s add allayarmy.afterattack
 execute unless entity @n[tag=allayarmy.notattackedyet,distance=..64] run scoreboard players set @s allayarmy.attackdelay 15
 execute unless entity @n[tag=allayarmy.notattackedyet,distance=..64] run return 0
 
-execute at @n[tag=allayarmy.notattackedyet] run particle minecraft:raid_omen ~ ~1 ~ 0.2 0.2 0.2 0 1
+execute as @n[tag=allayarmy.notattackedyet] at @s anchored eyes positioned ^ ^ ^ run particle minecraft:raid_omen ~ ~ ~ 0.2 0.2 0.2 0 1
 
 #marker movement and penalize
+data modify entity @s NoAI set value 1b
 tag @s add allayarmy.moveallay
 execute positioned ~ ~.35 ~ run summon minecraft:marker ^ ^ ^0.35 {Tags:["allayarmy.attackguide"]}
 execute as @n[tag=allayarmy.attackguide] at @s facing entity @n[tag=allayarmy.notattackedyet] eyes run tp @s ~ ~ ~ ~ ~
 execute as @n[tag=allayarmy.attackguide] at @s run tp @s ^ ^ ^0.26
 execute as @n[tag=allayarmy.attackguide] at @s run tp @s ~ ~-.35 ~
+execute as @n[tag=allayarmy.attackguide] at @s unless function allay_army:ispositionsafe positioned ~ ~0.2 ~ if function allay_army:ispositionsafe run tp @s ~ ~ ~
 ##execute as @n[tag=allayarmy.attackguide] at @s unless function allay_army:ispositionsafe as @n[tag=allayarmy.moveallay] run say penalized
 execute as @n[tag=allayarmy.attackguide] at @s unless function allay_army:ispositionsafe as @n[tag=allayarmy.moveallay] run scoreboard players remove @s allayarmy.attackdelay 10
 execute as @n[tag=allayarmy.attackguide] at @s run tp @s ~ ~-.05 ~
