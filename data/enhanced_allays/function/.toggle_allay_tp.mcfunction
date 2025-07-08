@@ -1,6 +1,4 @@
-execute unless data storage enhanced_allays:enabled allay_tp run data modify storage enhanced_allays:enable allay_tp set value 0
-execute if data storage enhanced_allays:enabled allay_tp run data remove storage enhanced_allays:enabled allay_tp
+scoreboard players add at ea.menu 1
+execute if score at ea.menu matches 2.. run scoreboard players set at ea.menu 0
 
-execute if data storage enhanced_allays:enable allay_tp run data modify storage enhanced_allays:enabled allay_tp set value 0
-execute if data storage enhanced_allays:enable allay_tp run data remove storage enhanced_allays:enable allay_tp
 function enhanced_allays:.config

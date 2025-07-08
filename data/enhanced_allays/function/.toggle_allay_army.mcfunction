@@ -1,7 +1,6 @@
-execute unless data storage enhanced_allays:enabled allay_army run data modify storage enhanced_allays:enable allay_army set value 0
-execute if data storage enhanced_allays:enabled allay_army run data remove storage enhanced_allays:enabled allay_army
+scoreboard players add aa ea.menu 1
+execute if score aa ea.menu matches 2.. run scoreboard players set aa ea.menu 0
 
-execute as @e[tag=allayarmy.attacking] run data modify entity @s NoAI set value 0b
-execute if data storage enhanced_allays:enable allay_army run data modify storage enhanced_allays:enabled allay_army set value 0
-execute if data storage enhanced_allays:enable allay_army run data remove storage enhanced_allays:enable allay_army
+execute if score aa ea.menu matches 0 as @e[tag=allayarmy.attacking] run data modify entity @s NoAI set value 0b
+
 function enhanced_allays:.config

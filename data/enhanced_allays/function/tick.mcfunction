@@ -1,3 +1,4 @@
-execute if data storage enhanced_allays:enabled allay_army run function allay_army:tick
-execute if data storage enhanced_allays:enabled allay_woodchoppers run function allay_woodchoppers:tick
-execute if data storage enhanced_allays:enabled allay_tp run function allay_tp:tick
+execute as @a[scores={ea.menu=1..}] at @s run function enhanced_allays:openmenu
+execute if score aa ea.menu matches 1 run function allay_army:tick
+execute if score aw ea.menu matches 1 run function allay_woodchoppers:tick
+execute if score at ea.menu matches 1 run function allay_tp:tick
