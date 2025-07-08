@@ -1,4 +1,4 @@
-execute unless entity @a[distance=..48] run return 0
+execute unless entity @a[distance=..32] run return 0
 
  #bring allay
 tag @s add allayw.bring
