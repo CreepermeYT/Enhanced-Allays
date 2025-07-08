@@ -5,8 +5,8 @@ function allay_tp:load
 scoreboard objectives add ea.menu trigger
 
 execute unless score aa ea.menu matches 0..1 run scoreboard players set aa ea.menu 1
-execute unless score aw ea.menu matches 0..1 run scoreboard players set aa ea.menu 1
-execute unless score at ea.menu matches 0..1 run scoreboard players set aa ea.menu 1
+execute unless score aw ea.menu matches 0..1 run scoreboard players set aw ea.menu 1
+execute unless score at ea.menu matches 0..1 run scoreboard players set at ea.menu 1
 
 data remove storage enhanced_allays:enabled allay_army
 data remove storage enhanced_allays:enabled allay_woodchoppers
