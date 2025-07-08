@@ -2,6 +2,7 @@
 execute if entity @s[tag=allayw.alrrun] run return 0
 tag @s add allayw.alrrun
 
+execute if score @s allayw.delay matches ..-1 run scoreboard players add @s allayw.delay 1
 
 #$say in theory breaking for $(tree)
 $execute if block ~.36 ~.34 ~.36 $(tree)_log run setblock ~.36 ~.34 ~.36 air destroy

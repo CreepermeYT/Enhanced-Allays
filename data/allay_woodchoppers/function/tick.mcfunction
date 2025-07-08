@@ -23,5 +23,8 @@ function allay_woodchoppers:checkfortree {tree:"mangrove"}
 #dark_oak
 function allay_woodchoppers:checkfortree {tree:"dark_oak"}
 
+#pale_oak
+function allay_woodchoppers:checkfortree {tree:"pale_oak"}
+
 #cherry
 function allay_woodchoppers:checkfortree {tree:"cherry"}

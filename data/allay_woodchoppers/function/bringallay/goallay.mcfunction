@@ -1,3 +1,21 @@
+scoreboard players remove @n[tag=allayw.moveallay] allayw.delay 2
+tag @s add allayw.continue
+execute as @n[tag=allayw.moveallay] at @s unless entity @e[tag=allayw.bringallay_oak,distance=..4] if score @s allayw.delay matches ..-100 run tag @s add allayw.cooldown
+execute as @n[tag=allayw.moveallay] if entity @s[tag=allayw.cooldown] run tag @n[tag=allayw.moveallay] add allayw.stuck
+execute as @n[tag=allayw.moveallay] if entity @s[tag=allayw.cooldown] run data modify entity @n[tag=allayw.moveallay] NoAI set value 0b
+execute as @n[tag=allayw.moveallay] if entity @s[tag=allayw.cooldown] run scoreboard players set @n[tag=allayw.moveallay] allayw.delay 100
+execute as @n[tag=allayw.moveallay] if entity @s[tag=allayw.cooldown] run tag @s remove allayw.continue
+tag @n[tag=allayw.moveallay] remove allayw.cooldown
+execute if entity @s[tag=!allayw.continue] run return 0
+tag @s remove allayw.continue
+
+
+execute as @n[tag=allayw.bringguide] at @s unless function allay_woodchoppers:bringallay/ispositionsafe run tag @n[tag=allayw.moveallay] add allayw.stuck
+execute as @n[tag=allayw.bringguide] at @s unless function allay_woodchoppers:bringallay/ispositionsafe run data modify entity @n[tag=allayw.moveallay] NoAI set value 0b
+execute as @n[tag=allayw.bringguide] at @s unless function allay_woodchoppers:bringallay/ispositionsafe run data modify entity @n[tag=allayw.moveallay] Motion[1] set value 0.2d
+execute as @n[tag=allayw.bringguide] at @s unless function allay_woodchoppers:bringallay/ispositionsafe run scoreboard players set @n[tag=allayw.moveallay] allayw.delay 40
+
+
 tag @s add allayw.allayb
 execute positioned ~ ~.35 ~ run summon minecraft:marker ^ ^ ^0.25 {Tags:["allayw.bringguide"]}
 execute as @n[tag=allayw.bringguide] at @s facing entity @n[tag=allayw.bring] eyes run tp @s ~ ~ ~ ~ ~

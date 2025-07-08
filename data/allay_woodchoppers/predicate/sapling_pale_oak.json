@@ -1,0 +1,49 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:item",
+        "location": {
+          "block": {
+            "blocks": "#minecraft:air"
+          }
+        },
+        "stepping_on": {
+          "block": {
+            "blocks": "#minecraft:dirt"
+          }
+        },
+        "slots": {
+          "contents": {
+            "items": "minecraft:pale_oak_sapling"
+          }
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:item",
+        "location": {
+          "block": {
+            "blocks": "#minecraft:replaceable"
+          }
+        },
+        "stepping_on": {
+          "block": {
+            "blocks": "#minecraft:dirt"
+          }
+        },
+        "slots": {
+          "contents": {
+            "items": "minecraft:pale_oak_sapling"
+          }
+        }
+      }
+    }
+  ]
+}
