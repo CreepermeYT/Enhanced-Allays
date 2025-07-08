@@ -16,7 +16,9 @@ $execute if block ~-.36 ~.4 ~.36 $(tree)_log run setblock ~-.36 ~.4 ~.36 air des
 
 #plant sapplings
 $execute as @n[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..2] at @s if block ~ ~-1 ~ #dirt run tag @s add allayw.sap
-$execute as @n[tag=allayw.sap] at @s run setblock ~ ~ ~ minecraft:$(tree)_sapling 
+tag @s add mangrove_sapling
+$execute unless entity @s[tag=$(tree)_sapling] as @n[tag=allayw.sap] at @s run function allay_woodchoppers:as/placesapling {tree:"$(tree)"}
+tag @s remove mangrove_sapling
 execute as @n[tag=allayw.sap] at @s run playsound minecraft:block.grass.place block @a[distance=..16] ~ ~ ~
 execute as @n[tag=allayw.sap] run item modify entity @s contents allay_woodchoppers:reduce
 tag @n[tag=allayw.sap] remove allayw.sap

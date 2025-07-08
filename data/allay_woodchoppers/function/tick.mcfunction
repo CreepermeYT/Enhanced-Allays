@@ -17,6 +17,9 @@ function allay_woodchoppers:checkfortree {tree:"birch"}
 #jungle
 function allay_woodchoppers:checkfortree {tree:"jungle"}
 
+#mangrove
+function allay_woodchoppers:checkfortree {tree:"mangrove"}
+
 #dark_oak
 function allay_woodchoppers:checkfortree {tree:"dark_oak"}
 

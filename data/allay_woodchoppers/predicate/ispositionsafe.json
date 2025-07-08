@@ -51,7 +51,16 @@
               "blocks": "#minecraft:replaceable"
             }
           }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "minecraft:mangrove_roots"
+            }
+          }
         }
+
       ]
     }
   ]

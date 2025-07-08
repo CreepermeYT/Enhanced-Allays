@@ -6,7 +6,7 @@ $execute as @a[tag=allayw.player] at @s unless entity @n[type=allay,distance=..3
 execute unless entity @a[tag=allayw.player] run return 0
 
 ## add tags
-$execute at @a[tag=allayw.player] as @e[type=allay,distance=..32,predicate=allay_woodchoppers:mainhand_$(tree)_log] run tag @s add allayw.haswood
+$execute at @a[tag=allayw.player] as @e[type=allay,distance=..48,predicate=allay_woodchoppers:mainhand_$(tree)_log] run tag @s add allayw.haswood
 
 ## stuck timer
 execute as @e[tag=allayw.haswood,tag=allayw.stuck] if score @s allayw.delay matches 1.. run scoreboard players remove @s allayw.delay 1
@@ -23,7 +23,7 @@ tag @e[tag=allayw.prefbringallay] remove allayw.prefbringallay
 tag @e[tag=allayw.sapling] remove allayw.sapling
 
 ## break and scan for new trees
-$execute as @a[tag=allayw.player] at @s as @e[type=allay,distance=..32,tag=allayw.haswood] at @s run function allay_woodchoppers:as/asallays {tree:"$(tree)"}
+$execute as @a[tag=allayw.player] at @s as @e[type=allay,distance=..48,tag=allayw.haswood] at @s run function allay_woodchoppers:as/asallays {tree:"$(tree)"}
 tag @e[tag=allayw.alrrun] remove allayw.alrrun
 tag @e[tag=allayw.foundwood] remove allayw.foundwood
 
