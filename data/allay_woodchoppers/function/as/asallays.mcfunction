@@ -15,13 +15,11 @@ $execute if block ~-.36 ~.4 ~.36 $(tree)_log run setblock ~-.36 ~.4 ~.36 air des
 
 
 #plant sapplings
-$execute as @n[predicate=allay_woodchoppers:sapling_$(tree),distance=..2] at @s if block ~ ~-1 ~ #minecraft:dirt run tag @s add allayw.sap
-$execute as @e[tag=allayw.sap] at @s run setblock ~ ~ ~ minecraft:$(tree)_sapling 
-execute as @e[tag=allayw.sap] at @s run playsound minecraft:block.grass.place block @a[distance=..16] ~ ~ ~
-execute as @e[tag=allayw.sap] at @s run kill @s
-
-#scan only if not being bring
-execute if entity @s[tag=allayw.allayb] run return 1
+$execute as @n[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..2] at @s run tag @s add allayw.sap
+$execute as @n[tag=allayw.sap] at @s run setblock ~ ~ ~ minecraft:$(tree)_sapling 
+execute as @n[tag=allayw.sap] at @s run playsound minecraft:block.grass.place block @a[distance=..16] ~ ~ ~
+execute as @n[tag=allayw.sap] run item modify entity @s contents allay_woodchoppers:reduce
+tag @n[tag=allayw.sap] remove allayw.sap
 
 #scan for new trees
 $execute positioned ~ ~-1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
@@ -43,7 +41,6 @@ $execute positioned ~ ~1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tr
 #execute if entity @s[tag=allayw.foundwood] run say foundnew
 $execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~1 ~ {Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
 execute if entity @s[tag=allayw.foundwood] run return 1
-
 
 $execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanlongrange_$(tree) run tag @s add allayw.foundwood
 #execute if entity @s[tag=allayw.foundwood] run say longrange

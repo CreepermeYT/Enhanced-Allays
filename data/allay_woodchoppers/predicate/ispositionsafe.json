@@ -48,15 +48,7 @@
           "condition": "minecraft:location_check",
           "predicate": {
             "block": {
-              "blocks": "minecraft:short_grass"
-            }
-          }
-        },
-        {
-          "condition": "minecraft:location_check",
-          "predicate": {
-            "block": {
-              "blocks": "minecraft:tall_grass"
+              "blocks": "#minecraft:replaceable"
             }
           }
         }
