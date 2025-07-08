@@ -16,7 +16,7 @@ execute as @e[tag=allayw.haswood,tag=allayw.stuck] if score @s allayw.delay matc
 $execute as @e[tag=allayw.bringallay_$(tree)] at @s run function allay_woodchoppers:bringallay/particles {tree:"$(tree)"}
 $execute as @e[tag=allayw.haswood,tag=!allayw.stuck] at @s run tag @n[tag=allayw.bringallay_$(tree),tag=!allayw.prefbringallay] add allayw.prefbringallay
 $execute as @e[tag=allayw.bringallay_$(tree),tag=allayw.prefbringallay] at @s run function allay_woodchoppers:bringallay/bringallay {tree:"$(tree)"}
-$execute as @e[type=item,predicate=allay_woodchoppers:sapling_$(tree)] at @s if block ~ ~-1 ~ #dirt run tag @s add allayw.sapling
+$execute at @a[tag=allayw.player] as @e[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..32] at @s if block ~ ~-1 ~ #dirt run tag @s add allayw.sapling
 execute as @e[tag=allayw.haswood,tag=!allayw.stuck,tag=!allayw.allayb] at @s run tag @n[tag=allayw.sapling,tag=!allayw.prefbringallay] add allayw.prefbringallay
 execute as @e[tag=allayw.sapling,tag=allayw.prefbringallay] at @s run function allay_woodchoppers:bringallay/bringallay
 tag @e[tag=allayw.prefbringallay] remove allayw.prefbringallay
