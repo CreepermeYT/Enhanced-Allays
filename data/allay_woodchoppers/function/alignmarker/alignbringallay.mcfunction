@@ -12,5 +12,6 @@ $execute at @s if block ~ ~-1 ~ $(tree)_log run tp @s ~ ~-1 ~
 
 execute at @s align xyz run tp @s ~0.5 ~0.5 ~0.5
 tag @s remove allayw.newb
+tag @s remove allayw.longrange
 
 $execute at @s run function allay_woodchoppers:alignmarker/killmultiple {tree:"$(tree)"}

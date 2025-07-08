@@ -5,6 +5,9 @@ tag @e[tag=allayw.allayb] remove allayw.allayb
 #oak
 function allay_woodchoppers:checkfortree {tree:"oak"}
 
+#acacia
+function allay_woodchoppers:checkfortree {tree:"acacia"}
+
 #spruce
 function allay_woodchoppers:checkfortree {tree:"spruce"}
 

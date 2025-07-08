@@ -15,7 +15,7 @@ $execute if block ~-.36 ~.4 ~.36 $(tree)_log run setblock ~-.36 ~.4 ~.36 air des
 
 
 #plant sapplings
-$execute as @n[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..2] at @s run tag @s add allayw.sap
+$execute as @n[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..2] at @s if block ~ ~-1 ~ #dirt run tag @s add allayw.sap
 $execute as @n[tag=allayw.sap] at @s run setblock ~ ~ ~ minecraft:$(tree)_sapling 
 execute as @n[tag=allayw.sap] at @s run playsound minecraft:block.grass.place block @a[distance=..16] ~ ~ ~
 execute as @n[tag=allayw.sap] run item modify entity @s contents allay_woodchoppers:reduce
@@ -25,26 +25,26 @@ tag @n[tag=allayw.sap] remove allayw.sap
 $execute positioned ~ ~-1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
 #execute if entity @s[tag=allayw.foundwood] run say foundnew
 $execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~-1 ~ {Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-execute if entity @s[tag=allayw.foundwood] run return 1
+tag @s remove allayw.foundwood
 
 $execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
 #execute if entity @s[tag=allayw.foundwood] run say foundnew
 $execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~ ~ {Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-execute if entity @s[tag=allayw.foundwood] run return 1
+tag @s remove allayw.foundwood
 
 $execute positioned ~ ~2 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
 #execute if entity @s[tag=allayw.foundwood] run say foundnew
 $execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~2 ~ {Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-execute if entity @s[tag=allayw.foundwood] run return 1
+tag @s remove allayw.foundwood
 
 $execute positioned ~ ~1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
 #execute if entity @s[tag=allayw.foundwood] run say foundnew
 $execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~1 ~ {Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-execute if entity @s[tag=allayw.foundwood] run return 1
+tag @s remove allayw.foundwood
 
 $execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanlongrange_$(tree) run tag @s add allayw.foundwood
 #execute if entity @s[tag=allayw.foundwood] run say longrange
 $execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~ ~ {CustomName:'"allay_woodchoppers:$(tree)_log marker"',Tags:["allayw.newb","allayw.longrange","allayw.bringallay_$(tree)"]}
-execute if entity @s[tag=allayw.foundwood] run return 1
+tag @s remove allayw.foundwood
 
 
