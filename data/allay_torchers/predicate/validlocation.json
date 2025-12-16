@@ -1,0 +1,83 @@
+[
+  {
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "light": {
+            "light": 0
+          },
+          "block": {
+            "blocks": "#minecraft:air"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:any_of",
+        "terms": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetX": 1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetX": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetZ": 1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:location_check",
+              "offsetZ": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

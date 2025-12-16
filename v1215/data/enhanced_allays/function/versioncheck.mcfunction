@@ -1,0 +1,1 @@
+scoreboard players set v ea.menu 1215

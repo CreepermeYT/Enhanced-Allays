@@ -1,0 +1,10 @@
+{
+  "values": [
+    "#minecraft:chains",
+    "#minecraft:fences",
+    "minecraft:water",
+    "#minecraft:replaceable",
+    "#minecraft:invalid_spawn_inside",
+    "#minecraft:prevent_mob_spawning_inside"
+  ]
+}
