@@ -16,7 +16,7 @@ $execute if block ~-0.34 ~.4 ~0.34 $(tree)_log run setblock ~-0.34 ~.4 ~0.34 air
 
 
 #plant sapplings
-$execute as @n[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..2] at @s if block ~ ~-1 ~ #dirt run tag @s add allayw.sap
+$execute as @n[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..2] at @s if block ~ ~-1 ~ #allay_woodchoppers:sapling_placeable run tag @s add allayw.sap
 tag @s add mangrove_sapling
 $execute unless entity @s[tag=$(tree)_sapling] as @n[tag=allayw.sap] at @s run function allay_woodchoppers:as/placesapling {tree:"$(tree)"}
 tag @s remove mangrove_sapling

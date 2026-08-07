@@ -13,7 +13,7 @@
         },
         "stepping_on": {
           "block": {
-            "blocks": "#minecraft:dirt"
+            "blocks": "#allay_woodchoppers:sapling_placeable"
           }
         },
         "slots": {
@@ -35,7 +35,7 @@
         },
         "stepping_on": {
           "block": {
-            "blocks": "#minecraft:dirt"
+            "blocks": "#allay_woodchoppers:sapling_placeable"
           }
         },
         "slots": {

@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "targeted_entity": {
+      "entity_type": [
+        "minecraft:allay",
+        "minecraft:player"
+      ]
+    }
+  }
+}

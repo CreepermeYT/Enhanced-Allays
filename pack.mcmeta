@@ -25,6 +25,15 @@
         },
         "min_format": 80,
         "max_format": 110
+      },
+      {
+        "directory": "v262",
+        "formats": {
+          "min_inclusive": 105,
+          "max_inclusive": 110
+        },
+        "min_format": 105,
+        "max_format": 110
       }
     ]
   }

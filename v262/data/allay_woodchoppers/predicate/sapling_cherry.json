@@ -5,7 +5,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "type": "minecraft:item",
+        "entity_type": "minecraft:item",
         "location": {
           "block": {
             "blocks": "#minecraft:air"
@@ -18,7 +18,7 @@
         },
         "slots": {
           "contents": {
-            "items": "minecraft:spruce_sapling"
+            "items": "minecraft:cherry_sapling"
           }
         }
       }
@@ -27,7 +27,7 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": {
-        "type": "minecraft:item",
+        "entity_type": "minecraft:item",
         "location": {
           "block": {
             "blocks": "#minecraft:replaceable"
@@ -40,7 +40,7 @@
         },
         "slots": {
           "contents": {
-            "items": "minecraft:spruce_sapling"
+            "items": "minecraft:cherry_sapling"
           }
         }
       }
