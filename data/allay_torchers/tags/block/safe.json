@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#minecraft:air",
+    "#minecraft:replaceable",
+    "minecraft:water",
+    "minecraft:torch",
+    "#minecraft:prevent_mob_spawning_inside"
+  ]
+}

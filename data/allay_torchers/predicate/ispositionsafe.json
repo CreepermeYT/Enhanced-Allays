@@ -8,39 +8,7 @@
           "condition": "minecraft:location_check",
           "predicate": {
             "block": {
-              "blocks": "#minecraft:air"
-            }
-          }
-        },
-        {
-          "condition": "minecraft:location_check",
-          "predicate": {
-            "block": {
-              "blocks": "minecraft:water"
-            }
-          }
-        },
-        {
-          "condition": "minecraft:location_check",
-          "predicate": {
-            "block": {
-              "blocks": "#minecraft:replaceable"
-            }
-          }
-        },
-        {
-          "condition": "minecraft:location_check",
-          "predicate": {
-            "block": {
-              "blocks": "#minecraft:prevent_mob_spawning_inside"
-            }
-          }
-        },
-        {
-          "condition": "minecraft:location_check",
-          "predicate": {
-            "block": {
-              "blocks": "minecraft:torch"
+              "blocks": "#allay_torchers:safe"
             }
           }
         }

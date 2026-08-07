@@ -1,4 +1,4 @@
-execute unless block ~ ~ ~ #air run kill @s
+execute unless block ~ ~ ~ #air unless block ~ ~ ~ light run kill @s
 
 particle dust{color:[1.0,1.0,0.8],scale:.7} ~ ~ ~ 0.2 0.3 0.2 0 2 normal
 

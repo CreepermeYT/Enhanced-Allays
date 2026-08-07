@@ -53,6 +53,7 @@ tag @s add allayarmy.afterattack
 scoreboard players set @s allayarmy.attackdelay 10
 tag @n[tag=allayarmy.dodamage] remove allayarmy.attacked
 tag @n[tag=allayarmy.dodamage] remove allayarmy.notattackedyet
+execute at @s as @n[tag=allayarmy.dodamage] if entity @s[type=creeper] at @s run damage @s 0.01 minecraft:player_attack at ^ ^ ^1
 execute at @s if entity @s[predicate=allay_army:mainhand_netherite_sword] run damage @n[tag=allayarmy.dodamage] 8 minecraft:player_attack by @s
 execute at @s if entity @s[predicate=allay_army:mainhand_diamond_sword] run damage @n[tag=allayarmy.dodamage] 7 minecraft:player_attack by @s
 execute at @s if entity @s[predicate=allay_army:mainhand_iron_sword] run damage @n[tag=allayarmy.dodamage] 6 minecraft:player_attack by @s
