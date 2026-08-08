@@ -19,8 +19,8 @@ tellraw @s ""
 execute if score atp ea.menu matches 1 run tellraw @s ["                  ",{"text":"Allay ","bold":true,"color":"aqua"},{"text":"TP ","bold":true,"color":"gray"},{"text": "[ ON ]","color":"white","bold":true,"click_event": {"action": "run_command", "command": "/function enhanced_allays:.toggle_allay_tp"}}]
 execute unless score atp ea.menu matches 1 run tellraw @s ["                  ",{"text":"Allay ","bold":true,"color":"aqua"},{"text":"TP ","bold":true,"color":"gray"},{"text": "[ OFF ]","color":"white","bold":true,"click_event": {"action": "run_command", "command": "/function enhanced_allays:.toggle_allay_tp"}}]
 tellraw @s ""
-execute if score at ea.menu matches 1 run tellraw @s ["                  ",{"text":"Allay ","bold":true,"color":"aqua"},{"text":"TP ","bold":true,"color":"gray"},{"text": "[ ON ]","color":"white","bold":true,"click_event": {"action": "run_command", "command": "/function enhanced_allays:.toggle_allay_torchers"}}]
-execute unless score at ea.menu matches 1 run tellraw @s ["                  ",{"text":"Allay ","bold":true,"color":"aqua"},{"text":"TP ","bold":true,"color":"gray"},{"text": "[ OFF ]","color":"white","bold":true,"click_event": {"action": "run_command", "command": "/function enhanced_allays:.toggle_allay_torchers"}}]
+execute if score at ea.menu matches 1 run tellraw @s ["                  ",{"text":"Allay ","bold":true,"color":"aqua"},{"text":"TORCHERS ","bold":true,"color":"yellow"},{"text": "[ ON ]","color":"white","bold":true,"click_event": {"action": "run_command", "command": "/function enhanced_allays:.toggle_allay_torchers"}}]
+execute unless score at ea.menu matches 1 run tellraw @s ["                  ",{"text":"Allay ","bold":true,"color":"aqua"},{"text":"TORCHERS ","bold":true,"color":"yellow"},{"text": "[ OFF ]","color":"white","bold":true,"click_event": {"action": "run_command", "command": "/function enhanced_allays:.toggle_allay_torchers"}}]
 tellraw @s ""
 
 playsound ui.button.click master @s

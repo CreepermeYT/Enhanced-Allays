@@ -5,14 +5,20 @@ tag @s add allayw.alrrun
 execute if score @s allayw.delay matches ..-1 run scoreboard players add @s allayw.delay 1
 
 #$say in theory breaking for $(tree)
-$execute if block ~0.34 ~.34 ~0.34 $(tree)_log run setblock ~0.34 ~.34 ~0.34 air destroy
-$execute if block ~0.34 ~.34 ~-0.34 $(tree)_log run setblock ~0.34 ~.34 ~-0.34 air destroy
-$execute if block ~-0.34 ~.34 ~-0.34 $(tree)_log run setblock ~-0.34 ~.34 ~-0.34 air destroy
-$execute if block ~-0.34 ~.34 ~0.34 $(tree)_log run setblock ~-0.34 ~.34 ~0.34 air destroy
-$execute if block ~0.34 ~.4 ~0.34 $(tree)_log run setblock ~0.34 ~.4 ~0.34 air destroy
-$execute if block ~0.34 ~.4 ~-0.34 $(tree)_log run setblock ~0.34 ~.4 ~-0.34 air destroy
-$execute if block ~-0.34 ~.4 ~-0.34 $(tree)_log run setblock ~-0.34 ~.4 ~-0.34 air destroy
-$execute if block ~-0.34 ~.4 ~0.34 $(tree)_log run setblock ~-0.34 ~.4 ~0.34 air destroy
+$execute if block ~0.33 ~.34 ~0.33 $(tree)_log run setblock ~0.33 ~.34 ~0.33 air destroy
+$execute if block ~0.33 ~.34 ~-0.33 $(tree)_log run setblock ~0.33 ~.34 ~-0.33 air destroy
+$execute if block ~-0.33 ~.34 ~-0.33 $(tree)_log run setblock ~-0.33 ~.34 ~-0.33 air destroy
+$execute if block ~-0.33 ~.34 ~0.33 $(tree)_log run setblock ~-0.33 ~.34 ~0.33 air destroy
+$execute if block ~0.33 ~.4 ~0.33 $(tree)_log run setblock ~0.33 ~.4 ~0.33 air destroy
+$execute if block ~0.33 ~.4 ~-0.33 $(tree)_log run setblock ~0.33 ~.4 ~-0.33 air destroy
+$execute if block ~-0.33 ~.4 ~-0.33 $(tree)_log run setblock ~-0.33 ~.4 ~-0.33 air destroy
+$execute if block ~-0.33 ~.4 ~0.33 $(tree)_log run setblock ~-0.33 ~.4 ~0.33 air destroy
+
+$execute if block ~ ~.34 ~ $(tree)_wood run setblock ~ ~.34 ~ air destroy
+$execute if block ~1 ~.34 ~ $(tree)_wood run setblock ~1 ~.34 ~ air destroy
+$execute if block ~-1 ~.34 ~ $(tree)_wood run setblock ~-1 ~.34 ~ air destroy
+$execute if block ~ ~.34 ~1 $(tree)_wood run setblock ~ ~.34 ~1 air destroy
+$execute if block ~ ~.34 ~-1 $(tree)_wood run setblock ~ ~.34 ~-1 air destroy
 
 
 #plant sapplings
