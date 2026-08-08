@@ -19,4 +19,4 @@ data remove storage enhanced_allays:enabled allay_torchers
 scoreboard players reset v ea.menu
 function enhanced_allays:versioncheck
 
-tellraw @a [{"text":"-> ","bold":true},{"text":"LOADED","color":"green"},{"text":": ","color":"gray"},"","","",{"text":" <<","color":"dark_purple"},{"text":"Enhanced","color":"gold"},{"text":">> ","color":"dark_purple"},{"text":"Allays","color":"aqua"},{"text":" datapack/mod","color":"gray","bold":false},"     ",{"text":"  b2.0","color":"dark_gray","bold":false}]
+tellraw @a [{"text":"-> ","bold":true},{"text":"LOADED","color":"green"},{"text":": ","color":"gray"},"","","",{"text":" <<","color":"dark_purple"},{"text":"Enhanced","color":"gold"},{"text":">> ","color":"dark_purple"},{"text":"Allays","color":"aqua"},{"text":" datapack/mod","color":"gray","bold":false},"     ",{"text":"  v2.0","color":"dark_gray","bold":false}]
