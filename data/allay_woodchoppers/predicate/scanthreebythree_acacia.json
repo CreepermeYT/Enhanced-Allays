@@ -7,7 +7,7 @@
       "offsetZ": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },
@@ -17,7 +17,7 @@
       "offsetZ": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },
@@ -27,7 +27,7 @@
       "offsetZ": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },{
@@ -36,7 +36,7 @@
       "offsetZ": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },
@@ -46,7 +46,7 @@
       "offsetZ": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },
@@ -56,7 +56,7 @@
       "offsetZ": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },{
@@ -65,7 +65,7 @@
       "offsetZ": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },
@@ -75,7 +75,7 @@
       "offsetZ": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     },
@@ -85,7 +85,7 @@
       "offsetZ": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:acacia_log"
+          "blocks": "#allay_woodchoppers:acacia"
         }
       }
     }

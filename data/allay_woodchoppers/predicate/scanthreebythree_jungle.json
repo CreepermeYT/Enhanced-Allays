@@ -7,7 +7,7 @@
       "offsetZ": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },
@@ -17,7 +17,7 @@
       "offsetZ": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },
@@ -27,7 +27,7 @@
       "offsetZ": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },{
@@ -36,7 +36,7 @@
       "offsetZ": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },
@@ -46,7 +46,7 @@
       "offsetZ": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },
@@ -56,7 +56,7 @@
       "offsetZ": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },{
@@ -65,7 +65,7 @@
       "offsetZ": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },
@@ -75,7 +75,7 @@
       "offsetZ": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     },
@@ -85,7 +85,7 @@
       "offsetZ": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:jungle_log"
+          "blocks": "#allay_woodchoppers:jungle"
         }
       }
     }

@@ -7,7 +7,7 @@
       "offsetZ": -6,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -17,7 +17,7 @@
       "offsetZ": -5,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -27,7 +27,7 @@
       "offsetZ": -4,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -37,7 +37,7 @@
       "offsetZ": -3,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -47,7 +47,7 @@
       "offsetZ": -2,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -57,7 +57,7 @@
       "offsetZ": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -67,7 +67,7 @@
       "offsetZ": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },{
@@ -76,7 +76,7 @@
       "offsetZ": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },{
@@ -85,7 +85,7 @@
       "offsetZ": 2,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -95,7 +95,7 @@
       "offsetZ": 3,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -105,7 +105,7 @@
       "offsetZ": 4,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -115,7 +115,7 @@
       "offsetZ": 5,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -125,7 +125,7 @@
       "offsetZ": 6,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },{
@@ -134,7 +134,7 @@
       "offsetX": -6,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -144,7 +144,7 @@
       "offsetX": -5,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -154,7 +154,7 @@
       "offsetX": -4,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -164,7 +164,7 @@
       "offsetX": -3,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -174,7 +174,7 @@
       "offsetX": -2,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -184,7 +184,7 @@
       "offsetX": -1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -194,7 +194,7 @@
       "offsetX": 0,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },{
@@ -203,7 +203,7 @@
       "offsetX": 1,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },{
@@ -212,7 +212,7 @@
       "offsetX": 2,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -222,7 +222,7 @@
       "offsetX": 3,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -232,7 +232,7 @@
       "offsetX": 4,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -242,7 +242,7 @@
       "offsetX": 5,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     },
@@ -252,7 +252,7 @@
       "offsetX": 6,
       "predicate": {
         "block": {
-          "blocks": "minecraft:cherry_log"
+          "blocks": "#allay_woodchoppers:cherry"
         }
       }
     }
