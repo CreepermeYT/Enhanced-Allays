@@ -14,11 +14,35 @@ execute as @e[tag=allayw.haswood,tag=allayw.stuck] if score @s allayw.delay matc
 
 ## bring allays
 $execute as @e[tag=allayw.bringallay_$(tree)] at @s run function allay_woodchoppers:bringallay/particles {tree:"$(tree)"}
-$execute as @e[tag=allayw.haswood,tag=!allayw.stuck] at @s run tag @n[tag=allayw.bringallay_$(tree),tag=!allayw.prefbringallay] add allayw.prefbringallay
-$execute as @e[tag=allayw.bringallay_$(tree),tag=allayw.prefbringallay] at @s run function allay_woodchoppers:bringallay/bringallay {tree:"$(tree)"}
-$execute at @a[tag=allayw.player] as @e[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..32] at @s if block ~ ~-1 ~ #allay_woodchoppers:sapling_placeable run tag @s add allayw.sapling
-execute as @e[tag=allayw.haswood,tag=!allayw.stuck,tag=!allayw.allayb] at @s run tag @n[tag=allayw.sapling,tag=!allayw.prefbringallay] add allayw.prefbringallay
-execute as @e[tag=allayw.sapling,tag=allayw.prefbringallay] at @s run function allay_woodchoppers:bringallay/bringallay
+
+## USE NEW COMMON PATHFINDING
+scoreboard players set mx ea.pathfind 400
+scoreboard players set cd ea.pathfind 300
+scoreboard players set cs ea.pathfind 0
+data modify storage ea logic set value "woodchoppers"
+data modify storage ea forward set value 0.21
+data modify storage ea turn set value 0.14
+## TAGGING ALLAYS
+execute as @e[type=allay,tag=allayw.haswood] at @s if entity @a[distance=..48] run tag @s add ea.validallay
+## TAGGING LOG TARGETS
+$tag @e[tag=allayw.bringallay_$(tree)] add ea.target
+## CALLING PATHFIND
+execute as @e[type=allay,tag=ea.validallay] at @s run function enhanced_allays:common/pathfinding/nearest
+tag @e[type=allay,tag=ea.pathfinding,tag=ea.validallay] remove ea.validallay
+tag @e[type=marker,tag=ea.target] remove ea.target
+## TAGGING SAPLINGS
+$execute at @a[tag=allayw.player] as @e[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..32] at @s if block ~ ~-1 ~ #allay_woodchoppers:sapling_placeable run tag @s add ea.target
+## CALLING PATHFIND for saplings
+execute as @e[type=allay,tag=ea.validallay] at @s run function enhanced_allays:common/pathfinding/nearest
+tag @e[type=allay,tag=ea.validallay] remove ea.validallay
+tag @e[tag=ea.target] remove ea.target
+
+## OLD TAGGING & PATHFINDING
+#$execute as @e[tag=allayw.haswood,tag=!allayw.stuck] at @s run tag @n[tag=allayw.bringallay_$(tree),tag=!allayw.prefbringallay] add allayw.prefbringallay
+#$execute as @e[tag=allayw.bringallay_$(tree),tag=allayw.prefbringallay] at @s run function allay_woodchoppers:bringallay/bringallay {tree:"$(tree)"}
+#$execute at @a[tag=allayw.player] as @e[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..32] at @s if block ~ ~-1 ~ #allay_woodchoppers:sapling_placeable run tag @s add allayw.sapling
+#execute as @e[tag=allayw.haswood,tag=!allayw.stuck,tag=!allayw.allayb] at @s run tag @n[tag=allayw.sapling,tag=!allayw.prefbringallay] add allayw.prefbringallay
+#execute as @e[tag=allayw.sapling,tag=allayw.prefbringallay] at @s run function allay_woodchoppers:bringallay/bringallay
 tag @e[tag=allayw.prefbringallay] remove allayw.prefbringallay
 tag @e[tag=allayw.sapling] remove allayw.sapling
 

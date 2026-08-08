@@ -1,6 +1,6 @@
 # avoid NoAI allays
-execute as @e[tag=allt.allayb] run data modify entity @s NoAI set value 0b
-tag @e[tag=allt.allayb] remove allt.allayb
+#execute as @e[tag=allt.allayb] run data modify entity @s NoAI set value 0b
+#tag @e[tag=allt.allayb] remove allt.allayb
 
 ## add tags
 execute at @a as @e[type=minecraft:allay,predicate=allay_torchers:mainhand_torch,distance=..32] at @s run tag @s[tag=!allt.disabled] add allt.has
@@ -28,8 +28,22 @@ execute as @e[tag=allt.has] unless entity @s[tag=allt.allayb] at @s run function
 execute as @a at @s if entity @e[tag=allt.has,distance=..32] anchored eyes positioned ^ ^ ^ run function allay_torchers:positionfinding/search {dist:24}
 
 ## bring allays to known places
-execute as @e[tag=allt.has,tag=allt.acthas] at @s run function allay_torchers:bringallay/nearest
-execute as @e[tag=allt.has,scores={allt.score=..-1}] run scoreboard players add @s allt.score 1
+## USE NEW COMMON PATHFINDING
+scoreboard players set mx ea.pathfind 120
+scoreboard players set cd ea.pathfind 60
+scoreboard players set cs ea.pathfind 30
+data modify storage ea logic set value "torchers"
+data modify storage ea forward set value 0.25
+data modify storage ea turn set value 0.15
+tag @e[type=marker,tag=allt.place] add ea.target
+execute as @e[type=allay,tag=allt.has,tag=allt.acthas,tag=!ea.stuck] at @s if entity @a[distance=..48] run tag @s add ea.validallay
+execute as @e[type=allay,tag=ea.validallay] at @s run function enhanced_allays:common/pathfinding/nearest
+tag @e[type=allay,tag=ea.validallay] remove ea.validallay
+tag @e[type=marker,tag=ea.target] remove ea.target
+## OLD PATHFINDING
+#execute as @e[tag=allt.has,tag=allt.acthas] at @s run function allay_torchers:bringallay/nearest
+#execute as @e[tag=allt.has,scores={allt.score=..-1}] run scoreboard players add @s allt.score 1
+
 ## place cleanup and particles
 execute as @e[tag=allt.place] at @s unless entity @a[distance=..32] run kill @s
 execute as @e[tag=allt.place] at @s unless entity @e[tag=allt.has,distance=..32] run kill @s

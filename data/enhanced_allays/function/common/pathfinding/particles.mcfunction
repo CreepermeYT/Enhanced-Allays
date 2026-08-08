@@ -1,0 +1,1 @@
+$function #enhanced_allays:particles_$(logic)

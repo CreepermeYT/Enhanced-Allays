@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#minecraft:air",
+    "#minecraft:leaves",
+    "#minecraft:logs",
+    "#minecraft:saplings",
+    "#minecraft:flowers",
+    "#minecraft:replaceable",
+    "minecraft:water",
+    "minecraft:torch",
+    "minecraft:mangrove_roots"
+  ]
+}

@@ -1,7 +1,7 @@
 scoreboard players remove @n[tag=allt.moveallay] allt.score 2
 tag @s add allt.continue
 ## MAX GO TIME HERE ->
-execute as @n[tag=allt.moveallay] at @s unless entity @e[tag=allt.bringallay_oak,distance=..4] if score @s allt.score matches ..-120 run tag @s add allt.cooldown
+execute as @n[tag=allt.moveallay] at @s unless entity @e[tag=allt.bringallay,distance=..4] if score @s allt.score matches ..-120 run tag @s add allt.cooldown
 execute as @n[tag=allt.moveallay] if entity @s[tag=allt.cooldown] run tag @n[tag=allt.moveallay] add allt.stuck
 execute as @n[tag=allt.moveallay] if entity @s[tag=allt.cooldown] run data modify entity @n[tag=allt.moveallay] NoAI set value 0b
 ## IF MAX TIME REACHED THEN COOLDOWN TIME HERE ->

@@ -1,7 +1,8 @@
 {
   "values": [
     "#minecraft:air",
-    "#minecraft:prevent_mob_spawning_inside",
+    "#minecraft:saplings",
+    "#minecraft:flowers",
     "#minecraft:replaceable",
     "minecraft:water",
     "minecraft:torch"

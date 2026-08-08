@@ -1,0 +1,1 @@
+$execute if function #enhanced_allays:pathfind_$(logic) run scoreboard players set sc ea.pathfind 1

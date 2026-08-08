@@ -2,6 +2,7 @@ $execute if block ~ ~1 ~ $(tree)_leaves run tag @s add hasleaves
 $execute if block ~ ~2 ~ $(tree)_leaves run tag @s add hasleaves
 $execute if block ~ ~3 ~ $(tree)_leaves run tag @s add hasleaves
 $execute if block ~ ~4 ~ $(tree)_leaves run tag @s add hasleaves
+$execute if block ~ ~5 ~ $(tree)_leaves run tag @s add hasleaves
 $execute if block ~1 ~4 ~ $(tree)_leaves run tag @s add hasleaves
 $execute if block ~ ~4 ~1 $(tree)_leaves run tag @s add hasleaves
 $execute if block ~-1 ~4 ~ $(tree)_leaves run tag @s add hasleaves

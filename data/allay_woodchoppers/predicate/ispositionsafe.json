@@ -40,6 +40,14 @@
           "condition": "minecraft:location_check",
           "predicate": {
             "block": {
+              "blocks": "#minecraft:flowers"
+            }
+          }
+        },
+        {
+          "condition": "minecraft:location_check",
+          "predicate": {
+            "block": {
               "blocks": "minecraft:water"
             }
           }
