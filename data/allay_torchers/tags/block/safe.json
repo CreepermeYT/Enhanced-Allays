@@ -4,6 +4,7 @@
     "#minecraft:prevent_mob_spawning_inside",
     "#minecraft:replaceable",
     "minecraft:water",
-    "minecraft:torch"
+    "minecraft:torch",
+    "minecraft:light"
   ]
 }

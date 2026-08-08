@@ -8,6 +8,7 @@
     "#minecraft:replaceable",
     "minecraft:water",
     "minecraft:torch",
-    "minecraft:mangrove_roots"
+    "minecraft:mangrove_roots",
+    "minecraft:light"
   ]
 }

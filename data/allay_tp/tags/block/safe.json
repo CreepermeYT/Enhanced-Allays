@@ -4,6 +4,7 @@
     "#minecraft:flowers",
     "#minecraft:replaceable",
     "minecraft:water",
-    "minecraft:torch"
+    "minecraft:torch",
+    "minecraft:light"
   ]
 }

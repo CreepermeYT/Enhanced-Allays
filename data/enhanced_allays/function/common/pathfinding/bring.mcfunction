@@ -1,7 +1,8 @@
 ## Run by current ea.selectedtarget
 
 ## Finds nearest ea.validallay within 48 blocks and tags it as ea.selectedallay
-execute as @n[type=allay,tag=ea.validallay,tag=!ea.stuck,distance=..48] run tag @s add ea.selectedallay
+execute as @n[type=allay,tag=ea.validallay,tag=!ea.stuck,tag=!ea.taken,distance=..48] run tag @s add ea.selectedallay
+tag @n[tag=ea.selectedallay] add ea.taken
 
 ## Particles bc why not
 function enhanced_allays:common/pathfinding/particles with storage ea 
