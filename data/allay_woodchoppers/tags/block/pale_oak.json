@@ -1,6 +1,6 @@
 {
   "values": [
-    {"id": "minecraft:pale_oak_log", "required": false}
+    {"id": "minecraft:pale_oak_log", "required": false},
     {"id": "minecraft:pale_oak_wood", "required": false}
   ]
 }
