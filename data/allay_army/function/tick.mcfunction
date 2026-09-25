@@ -14,6 +14,7 @@ scoreboard players set cs ea.pathfind -30
 data modify storage ea logic set value "army"
 data modify storage ea forward set value 0.35
 data modify storage ea turn set value 0.26
+data modify storage ea dist set value 0.45
 ## TAGGING ALLAYS
 execute as @e[type=allay,tag=!allayarmy.attackdelay,tag=!allayarmy.attacking,tag=!allayarmy.afterattack] if entity @s[predicate=allay_army:mainhand_swords] at @s if entity @a[distance=..32] run tag @s add ea.validallay
 ## TAGGING TARGET MOBS

@@ -23,7 +23,7 @@ function enhanced_allays:common/pathfinding/speed with storage ea
 ## IF <1 block away
 tag @s add ea.notthereyet
 execute as @n[tag=ea.selectedtarget] at @s anchored eyes positioned ^ ^ ^ run summon minecraft:marker ~ ~ ~ {Tags:["ea.distcheck"]}
-execute as @n[tag=ea.guide] at @s if entity @e[tag=ea.distcheck,distance=...5] run tag @n[tag=ea.selectedallay] remove ea.notthereyet
+function enhanced_allays:common/pathfinding/dist with storage ea
 kill @e[tag=ea.distcheck]
 execute if entity @s[tag=!ea.notthereyet] as @n[tag=ea.selectedtarget] at @s anchored eyes positioned ^ ^ ^ run tp @n[tag=ea.selectedallay] ~ ~-.35 ~
 execute if entity @s[tag=!ea.notthereyet] run kill @n[tag=ea.guide]

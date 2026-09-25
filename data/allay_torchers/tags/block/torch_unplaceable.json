@@ -6,6 +6,9 @@
     "#minecraft:replaceable",
     "#minecraft:invalid_spawn_inside",
     "#minecraft:prevent_mob_spawning_inside",
-    "minecraft:cobweb"
+    "minecraft:cobweb",
+    "#minecraft:saplings",
+    "#minecraft:leaves",
+    "mineacraft:sculk_vein"
   ]
 }

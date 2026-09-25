@@ -18,6 +18,8 @@
 ## -> data modify storage ea logic set value 0.25
 ## Expects storage ea turn to have a speed to tp the allays towards the target
 ## -> data modify storage ea logic set value 0.15
+## Expects storage ea dist to have the minimum distance before tping to the target
+## -> data modify storage ea logic set value 0.5
 
 ## Skip stuck/cooldown allays
 execute if entity @s[tag=ea.stuck] run return 0

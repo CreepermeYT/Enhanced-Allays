@@ -24,30 +24,16 @@ execute as @n[tag=allayw.sap] at @s run playsound minecraft:block.grass.place bl
 execute as @n[tag=allayw.sap] run item modify entity @s contents allay_woodchoppers:reduce
 tag @n[tag=allayw.sap] remove allayw.sap
 
+
 #scan for new trees
-$execute positioned ~ ~-1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
-#execute if entity @s[tag=allayw.foundwood] run say foundnew
-$execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~-1 ~ {CustomName:'"allay_woodchoppers:#allay_woodchoppers:$(tree) marker"',Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-tag @s remove allayw.foundwood
 
-$execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
-#execute if entity @s[tag=allayw.foundwood] run say foundnew
-$execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~ ~ {CustomName:'"allay_woodchoppers:#allay_woodchoppers:$(tree) marker"',Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-tag @s remove allayw.foundwood
+$execute positioned ~ ~-1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run function allay_woodchoppers:alignmarker/findlog {tree:"$(tree)"}
 
-$execute positioned ~ ~2 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
-#execute if entity @s[tag=allayw.foundwood] run say foundnew
-$execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~2 ~ {CustomName:'"allay_woodchoppers:#allay_woodchoppers:$(tree) marker"',Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-tag @s remove allayw.foundwood
+$execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run function allay_woodchoppers:alignmarker/findlog {tree:"$(tree)"}
 
-$execute positioned ~ ~1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run tag @s add allayw.foundwood
-#execute if entity @s[tag=allayw.foundwood] run say foundnew
-$execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~1 ~ {CustomName:'"allay_woodchoppers:#allay_woodchoppers:$(tree) marker"',Tags:["allayw.newb","allayw.bringallay_$(tree)"]}
-tag @s remove allayw.foundwood
+$execute positioned ~ ~2 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run function allay_woodchoppers:alignmarker/findlog {tree:"$(tree)"}
 
-$execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanlongrange_$(tree) run tag @s add allayw.foundwood
-#execute if entity @s[tag=allayw.foundwood] run say longrange
-$execute if entity @s[tag=allayw.foundwood] run summon marker ~ ~ ~ {CustomName:'"allay_woodchoppers:#allay_woodchoppers:$(tree) marker"',Tags:["allayw.newb","allayw.longrange","allayw.bringallay_$(tree)"]}
-tag @s remove allayw.foundwood
+$execute positioned ~ ~1 ~ if predicate allay_woodchoppers:scanthreebythree_$(tree) run function allay_woodchoppers:alignmarker/findlog {tree:"$(tree)"}
 
+$execute positioned ~ ~ ~ if predicate allay_woodchoppers:scanlongrange_$(tree) run function allay_woodchoppers:alignmarker/findloglr {tree:"$(tree)"}
 

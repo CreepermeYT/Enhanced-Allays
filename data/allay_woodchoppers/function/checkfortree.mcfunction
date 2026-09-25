@@ -22,6 +22,7 @@ scoreboard players set cs ea.pathfind 0
 data modify storage ea logic set value "woodchoppers"
 data modify storage ea forward set value 0.21
 data modify storage ea turn set value 0.14
+data modify storage ea dist set value 0.2
 ## TAGGING ALLAYS
 tag @e[type=allay,tag=allayw.haswood] add ea.validallay
 ## TAGGING LOG TARGETS
@@ -56,7 +57,7 @@ $execute as @a[tag=allayw.player] at @s anchored eyes positioned ^ ^ ^ run funct
 
 ## align bringallay markers
 $execute as @e[type=marker,tag=allayw.newb,tag=allayw.bringallay_$(tree)] at @s run function allay_woodchoppers:alignmarker/alignbringallay {tree:"$(tree)"}
-## move them down and delete if 2 in same spot
+## move them down
 $execute as @e[type=marker,tag=allayw.bringallay_$(tree)] at @s if block ~ ~-1 ~ $(tree)_log run tp @s ~ ~-1 ~
 
 ## forget players with logs

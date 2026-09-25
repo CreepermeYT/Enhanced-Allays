@@ -40,6 +40,7 @@ scoreboard players set cs ea.pathfind 30
 data modify storage ea logic set value "torchers"
 data modify storage ea forward set value 0.27
 data modify storage ea turn set value 0.20
+data modify storage ea dist set value 0.2
 tag @e[type=marker,tag=allt.place] add ea.target
 execute as @e[type=allay,tag=allt.has,tag=allt.acthas,tag=!ea.stuck] at @s if entity @a[distance=..48] run tag @s add ea.validallay
 execute as @e[type=allay,tag=ea.validallay] at @s run function enhanced_allays:common/pathfinding/nearest
