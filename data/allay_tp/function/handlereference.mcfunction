@@ -1,0 +1,2 @@
+$tag @e[type=allay,nbt={Brain:{memories:{"minecraft:liked_player":{value:$(UUID)}}}}] remove allaytp.reference
+$execute if entity @s[scores={allayTP=1},gamemode=!spectator] at @s run tag @n[type=allay,nbt={Brain:{memories:{"minecraft:liked_player":{value:$(UUID)}}}}] add allaytp.reference
