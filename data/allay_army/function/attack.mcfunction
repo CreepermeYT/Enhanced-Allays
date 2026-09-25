@@ -4,7 +4,7 @@ tag @s remove allayarmy.attacking
 tag @n[tag=ea.selectedtarget] add allayarmy.dodamage
 tag @s add allayarmy.adodamage
 #tag @s add allayarmy.afterattack
-execute at @s positioned ^ ^ ^2 unless entity @e[tag=ea.target,tag=!ea.selectedtarget,distance=..2] run tag @s add allayarmy.afterattack
+execute at @s positioned ^ ^ ^1.5 unless entity @e[tag=ea.target,tag=!ea.selectedtarget,distance=..1.5] run tag @s add allayarmy.afterattack
 execute if score @s ea.pathfind matches ..-80 run tag @s add allayarmy.afterattack
 execute if entity @s[tag=allayarmy.afterattack] run scoreboard players set @s allayarmy.attackdelay 10
 execute if entity @s[tag=allayarmy.afterattack] run scoreboard players set @s ea.pathfind 30
@@ -18,7 +18,9 @@ execute at @s if entity @s[predicate=allay_army:mainhand_iron_sword] run damage 
 execute at @s if entity @s[predicate=allay_army:mainhand_copper_sword] run damage @n[tag=allayarmy.dodamage] 5 minecraft:player_attack by @s
 execute at @s if entity @s[predicate=allay_army:mainhand_stone_sword] run damage @n[tag=allayarmy.dodamage] 5 minecraft:player_attack by @s
 execute at @s if entity @s[predicate=allay_army:mainhand_wooden_sword] run damage @n[tag=allayarmy.dodamage] 4 minecraft:player_attack by @s
-execute at @s run tp @s ^ ^ ^.2
+execute at @s if entity @s[predicate=allay_army:mainhand_golden_sword] run damage @n[tag=allayarmy.dodamage] 4 minecraft:player_attack by @s
+execute at @s run tp @s ^ ^ ^.1
+execute if entity @s[tag=!allayarmy.afterattack] at @s run say combo
 execute if entity @s[tag=!allayarmy.afterattack] at @s run tp @s ^ ^ ^.4
 tag @n[tag=allayarmy.dodamage] remove allayarmy.dodamage
 tag @s remove allayarmy.adodamage

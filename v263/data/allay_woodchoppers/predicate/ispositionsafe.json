@@ -1,0 +1,75 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:any_of",
+      "terms": [
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#minecraft:air"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#minecraft:leaves"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#minecraft:logs"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#minecraft:saplings"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#minecraft:flowers"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "minecraft:water"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "#minecraft:replaceable"
+            }
+          }
+        },
+        {
+          "type": "minecraft:location_check",
+          "predicate": {
+            "block": {
+              "blocks": "minecraft:mangrove_roots"
+            }
+          }
+        }
+
+      ]
+    }
+  ]
+}

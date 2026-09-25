@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "entity_type": "minecraft:item",
+        "location": {
+          "block": {
+            "blocks": "#minecraft:air"
+          }
+        },
+        "stepping_on": {
+          "block": {
+            "blocks": "#allay_woodchoppers:sapling_placeable"
+          }
+        },
+        "slots": {
+          "contents": {
+            "items": "minecraft:cherry_sapling"
+          }
+        }
+      }
+    },
+    {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "entity_type": "minecraft:item",
+        "location": {
+          "block": {
+            "blocks": "#minecraft:replaceable"
+          }
+        },
+        "stepping_on": {
+          "block": {
+            "blocks": "#allay_woodchoppers:sapling_placeable"
+          }
+        },
+        "slots": {
+          "contents": {
+            "items": "minecraft:cherry_sapling"
+          }
+        }
+      }
+    }
+  ]
+}

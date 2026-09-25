@@ -1,0 +1,81 @@
+  {
+    "type": "minecraft:all_of",
+    "terms": [
+      {
+        "type": "minecraft:location_check",
+        "predicate": {
+          "light": {
+            "light": 0
+          },
+          "block": {
+            "blocks": "#minecraft:air"
+          }
+        }
+      },
+      {
+        "type": "minecraft:any_of",
+        "terms": [
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:location_check",
+              "offsetY": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:location_check",
+              "offsetX": 1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:location_check",
+              "offsetX": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:location_check",
+              "offsetZ": 1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          },
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:location_check",
+              "offsetZ": -1,
+              "predicate": {
+                "block": {
+                  "blocks": "#allay_torchers:torch_unplaceable"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }

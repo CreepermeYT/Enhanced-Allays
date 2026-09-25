@@ -2,9 +2,9 @@
 	"pack": {
 		"description": "Enhanced Allays by CreepermeYT",
 		"pack_format": 48,
-                "supported_formats": { "min_inclusive": 48, "max_inclusive": 110 },
+                "supported_formats": { "min_inclusive": 48, "max_inclusive": 121 },
         "min_format": 48,
-        "max_format": 110
+        "max_format": 121
 	},
   "overlays": {
     "entries": [
@@ -21,10 +21,10 @@
         "directory": "v1216",
         "formats": {
           "min_inclusive": 80,
-          "max_inclusive": 110
+          "max_inclusive": 121
         },
         "min_format": 80,
-        "max_format": 110
+        "max_format": 121
       },
       {
         "directory": "v262",
@@ -34,6 +34,15 @@
         },
         "min_format": 105,
         "max_format": 110
+      },
+      {
+        "directory": "v263",
+        "formats": {
+          "min_inclusive": 121,
+          "max_inclusive": 121
+        },
+        "min_format": 121,
+        "max_format": 121
       }
     ]
   }

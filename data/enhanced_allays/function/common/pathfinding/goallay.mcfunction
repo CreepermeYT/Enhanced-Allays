@@ -19,16 +19,13 @@ tag @s remove ea.continue
 
 ## MAX SPEED HERE & BELOW ->
 function enhanced_allays:common/pathfinding/speed with storage ea
-## lower to allay's feet level
-execute as @n[tag=ea.guide] at @s run tp @s ~ ~-.35 ~
-
 
 ## IF <1 block away
 tag @s add ea.notthereyet
 execute as @n[tag=ea.selectedtarget] at @s anchored eyes positioned ^ ^ ^ run summon minecraft:marker ~ ~ ~ {Tags:["ea.distcheck"]}
-execute as @n[tag=ea.guide] at @s if entity @e[tag=ea.distcheck,distance=...7] run tag @n[tag=ea.selectedallay] remove ea.notthereyet
+execute as @n[tag=ea.guide] at @s if entity @e[tag=ea.distcheck,distance=...5] run tag @n[tag=ea.selectedallay] remove ea.notthereyet
 kill @e[tag=ea.distcheck]
-execute if entity @s[tag=!ea.notthereyet] as @n[tag=ea.selectedtarget] at @s anchored eyes positioned ^ ^ ^ align xyz run tp @n[tag=ea.selectedallay] ~.5 ~ ~.5
+execute if entity @s[tag=!ea.notthereyet] as @n[tag=ea.selectedtarget] at @s anchored eyes positioned ^ ^ ^ run tp @n[tag=ea.selectedallay] ~ ~-.35 ~
 execute if entity @s[tag=!ea.notthereyet] run kill @n[tag=ea.guide]
 
 ## RUN SPECIFIED LOGIC
@@ -41,6 +38,9 @@ scoreboard players reset sc ea.pathfind
 ## Finalize <1 block away logic
 execute if entity @s[tag=!ea.notthereyet] run return 1
 tag @s remove ea.notthereyet
+
+## lower to allay's feet level
+execute as @n[tag=ea.guide] at @s run tp @s ~ ~-.35 ~
 
 ## Try to avoid obstacles
 execute as @n[tag=ea.guide] at @s anchored eyes positioned ^ ^ ^ rotated as @n[tag=ea.selectedallay] positioned ^ ^ ^ unless function enhanced_allays:common/pathfinding/checkposition run function enhanced_allays:common/pathfinding/avoid

@@ -2,6 +2,8 @@
 execute as @e[type=allay,tag=allayarmy.attackdelay] run scoreboard players remove @s allayarmy.attackdelay 1
 execute as @e[type=allay,tag=allayarmy.attackdelay,scores={allayarmy.attackdelay=..0}] run tag @s remove allayarmy.attackdelay
 
+#do afterattack
+execute as @e[type=allay,tag=allayarmy.afterattack] at @s run function allay_army:afterattack
 
 # allays with sword -> check for close player -> find an available zombi to attack -> attack
 #try to attack
@@ -31,8 +33,3 @@ tag @e[tag=ea.target] remove ea.target
 #execute as @e[tag=allayarmy.notattackedyet] run say an attacked was leftover - error allay army
 #execute as @e[tag=allayarmy.notattackedyet] run tag @s remove allayarmy.attacked
 #execute as @e[tag=allayarmy.notattackedyet] run tag @s remove allayarmy.notattackedyet
-
-#do afterattack
-execute as @e[type=allay,tag=allayarmy.afterattack] at @s run function allay_army:afterattack
-
-

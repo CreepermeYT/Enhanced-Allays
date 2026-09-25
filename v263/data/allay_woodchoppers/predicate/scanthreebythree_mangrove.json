@@ -1,0 +1,93 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "offsetX": -1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },{
+      "type": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "offsetX": 0,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },{
+      "type": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetZ": -1,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetZ": 0,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    },
+    {
+      "type": "minecraft:location_check",
+      "offsetX": 1,
+      "offsetZ": 1,
+      "predicate": {
+        "block": {
+          "blocks": "#allay_woodchoppers:mangrove"
+        }
+      }
+    }
+  ]
+}

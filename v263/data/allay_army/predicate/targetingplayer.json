@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:any_of",
+  "terms": [
+    {
+      "type": "minecraft:all_of",
+      "terms": [
+        {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "targeted_entity": {
+              "entity_type": "minecraft:allay"
+            }
+          }
+        },
+        {
+          "type": "minecraft:inverted",
+          "term": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "entity_type": "minecraft:creeper"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "targeted_entity": {
+          "entity_type": "minecraft:player"
+        }
+      }
+    }
+  ]
+}
