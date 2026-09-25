@@ -17,7 +17,7 @@ data modify storage ea turn set value 0.26
 ## TAGGING ALLAYS
 execute as @e[type=allay,tag=!allayarmy.attackdelay,tag=!allayarmy.attacking,tag=!allayarmy.afterattack] if entity @s[predicate=allay_army:mainhand_swords] at @s if entity @a[distance=..32] run tag @s add ea.validallay
 ## TAGGING TARGET MOBS
-execute at @a if entity @e[type=allay,tag=ea.validallay,distance=..24] run tag @e[predicate=allay_army:targetingplayer,tag=!allayarmy.nametagged,distance=..12] add ea.target
+execute at @a if entity @e[type=allay,tag=ea.validallay,distance=..32] run tag @e[predicate=allay_army:targetingplayer,tag=!allayarmy.nametagged,distance=..16] add ea.target
 ## CALLING PATHFIND
 execute as @e[type=allay,tag=ea.validallay] at @s run function enhanced_allays:common/pathfinding/nearest
 tag @e[type=allay,tag=ea.validallay] remove ea.validallay

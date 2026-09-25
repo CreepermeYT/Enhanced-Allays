@@ -20,7 +20,7 @@ execute at @s if entity @s[predicate=allay_army:mainhand_stone_sword] run damage
 execute at @s if entity @s[predicate=allay_army:mainhand_wooden_sword] run damage @n[tag=allayarmy.dodamage] 4 minecraft:player_attack by @s
 execute at @s if entity @s[predicate=allay_army:mainhand_golden_sword] run damage @n[tag=allayarmy.dodamage] 4 minecraft:player_attack by @s
 execute at @s run tp @s ^ ^ ^.1
-execute if entity @s[tag=!allayarmy.afterattack] at @s run say combo
+#execute if entity @s[tag=!allayarmy.afterattack] at @s run say combo
 execute if entity @s[tag=!allayarmy.afterattack] at @s run tp @s ^ ^ ^.4
 tag @n[tag=allayarmy.dodamage] remove allayarmy.dodamage
 tag @s remove allayarmy.adodamage

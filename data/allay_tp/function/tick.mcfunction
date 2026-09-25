@@ -2,7 +2,8 @@
 #2 on
 scoreboard players enable @a allayTP
 
-execute as @a[scores={allayTP=2},gamemode=!spectator] at @s if function allay_tp:ispositionsafe if entity @e[type=allay,distance=32..64] run function allay_tp:myallays with entity @s
+
+execute as @a[scores={allayTP=2},gamemode=!spectator] at @s if function allay_tp:ispositionsafe if entity @e[type=allay,distance=48..64] as @e[type=allay,distance=48..64] run function allay_tp:myallays with entity @s
 
 
 execute as @a[scores={allayTP=1},gamemode=!spectator] at @s if function allay_tp:ispositionsafe if entity @e[type=allay,distance=..64] run function allay_tp:myallaysclose with entity @s

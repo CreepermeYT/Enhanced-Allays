@@ -3,7 +3,7 @@
 ## Expects function enhanced_allays:common/pathfinding/tickstuck is run once every tick BEFORE this function is run.
 
 ## Expects valid allays to already have ea.validallay tag
-## Expects targets to already have ea.target tag, and be .5 .5 .5 centered in the block
+## Expects targets to already have ea.target tag
 
 ## Expects mx score in ea.pathfind scoreboard with MAX pathfind time
 ## -> scoreboard players set mx ea.pathfind 120
@@ -23,7 +23,7 @@
 execute if entity @s[tag=ea.stuck] run return 0
 
 ## Finds nearest available target
-execute unless entity @n[tag=ea.selectedtarget] at @n[type=player,distance=..64] run tag @n[tag=ea.target,tag=!ea.taken] add ea.selectedtarget
+execute if entity @e[tag=ea.target] unless entity @e[tag=ea.selectedtarget] at @n[type=player,distance=..64] run tag @n[tag=ea.target,tag=!ea.taken] add ea.selectedtarget
 tag @n[tag=ea.selectedtarget] add ea.taken
 
 ## Makes selectedtarget find nearest allay and make it pathfind
