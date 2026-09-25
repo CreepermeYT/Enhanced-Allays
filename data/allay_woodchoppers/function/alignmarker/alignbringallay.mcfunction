@@ -5,7 +5,6 @@ $execute if entity @s[tag=allayw.longrange] run function allay_woodchoppers:alig
 
 #verify this is a tree
 $execute at @s run function allay_woodchoppers:alignmarker/checkleaves {tree:"$(tree)"}
-execute if entity @s[tag=!hasleaves] run kill @s
 execute unless entity @s[tag=hasleaves] run return 0
 tag @s remove hasleaves
 
