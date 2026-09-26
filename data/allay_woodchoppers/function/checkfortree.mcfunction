@@ -32,9 +32,9 @@ execute as @e[type=allay,tag=ea.validallay] at @s run function enhanced_allays:c
 tag @e[type=allay,tag=ea.pathfinding,tag=ea.validallay] remove ea.validallay
 tag @e[type=marker,tag=ea.target] remove ea.target
 ## TAGGING SAPLINGS
-$execute at @a[tag=allayw.player] as @e[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..48] at @s if block ~ ~-1 ~ #allay_woodchoppers:sapling_placeable run tag @s add ea.target
+$execute if score aws ea.menu matches 1 at @a[tag=allayw.player] as @e[type=item,predicate=allay_woodchoppers:sapling_$(tree),distance=..48] at @s if block ~ ~-1 ~ #allay_woodchoppers:sapling_placeable run tag @s add ea.target
 ## CALLING PATHFIND for saplings
-execute as @e[type=allay,tag=!ea.taken,tag=ea.validallay] at @s run function enhanced_allays:common/pathfinding/nearest
+execute if score aws ea.menu matches 1 as @e[type=allay,tag=!ea.taken,tag=ea.validallay] at @s run function enhanced_allays:common/pathfinding/nearest
 tag @e[type=allay,tag=ea.validallay] remove ea.validallay
 tag @e[type=item,tag=ea.target] remove ea.target
 
